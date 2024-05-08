@@ -1,0 +1,74 @@
+// Media Query
+@mixin device($device) {
+  @if $device == tablet {
+    @media (min-width: 43.75rem) {
+      @content;
+    }
+  }  
+  @else if $device == desktop {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+// Colors
+$color1: #FAF8F6;
+$color2: #F3EDE7;
+$color3: #49566D;
+$color4: #172339;
+$color5: #A060FF; 
+$color6: #CB30E3; 
+$color7: #FFA84E;
+
+
+//Typography
+$fonts: (
+  "$small1": 14px,
+  "$small2": 16px,
+  "$small3": 18px,
+  "$medium1": 20px,
+  "$medium2": 38px,
+  "$medium3": 40px,
+  "$large1": 48px,
+  "$large2": 56px,
+  "$large3": 72px,
+);
+
+// Buttons
+
+.button-1 {
+  display: inline-block;
+  font-size: map-get($fonts, "$small1");
+  font-weight: bold;
+  line-height: 1.71;
+  border: 1px solid $color4;
+  border-radius: 6px;
+  padding: 11px 14px;
+  @include device(desktop) {
+    &:hover {
+      background-color: $color4;
+      color: $color1;
+      cursor: pointer;
+    }
+  }
+}
+
+.button-2 {
+  display: inline-block;
+  font-size: map-get($fonts, "$small3");
+  font-weight: bold;
+  line-height: 1.77;
+  border-radius: 6px;
+  padding: 15px 30px;
+  background-color: $color4;
+  color: $color1;
+  @include device(desktop) {
+    &:hover {
+      background-image: linear-gradient(135deg, #A060FF 0%, 
+      #CB30E3 49%, #FFA84E);
+      cursor: pointer;
+    }
+  }
+}
+

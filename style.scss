@@ -1,0 +1,323 @@
+// Imports
+@import 'utilities';
+
+// CSS RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+// Project Start
+
+body {
+  font-family: "Epilogue", sans-serif;
+  min-height: 100vh;
+  background-color: $color1;
+
+}
+
+// HEADER STARTS HERE
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px auto 56px auto;
+  padding: 0 16px 0 16px;
+  @include device(tablet) {
+    padding: 0 40px 0 39px;
+    margin: 40px auto 80px auto;
+  }
+  @include device(desktop) {
+    max-width: 1110px;
+    padding: initial;
+    margin: 50px auto 87px auto;
+  }
+}
+// HEADER ENDS  HERE ---------------------
+
+// FIRST SECTION (HEADLINE) STARTS HERE
+.hero__headline {
+  padding: 0 16px 0 16px;
+  margin-bottom: 237px;
+  @include device(tablet) {
+    padding: 0 40px 0 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    margin-bottom: 273px;
+    gap: 88px 0;
+  }
+  @include device(desktop) {
+    grid-template-columns: 1fr auto auto;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: initial;
+    margin-bottom: 199px;
+    gap: 0;
+  }
+}
+
+.headline__content {
+  margin-bottom: 55.68px;
+  @include device(tablet) {
+    max-width: 573px;
+    grid-row: 2;
+    grid-column: 1 / 3;
+    margin-bottom: 40px;
+  }
+  @include device(desktop) {
+    grid-row: 1;
+    max-width: 635px;
+    margin-top: 103px;
+    margin-bottom: initial;
+  }
+}
+
+.headline__title {
+  font-size: map-get($fonts, "$medium2");
+  color: $color4;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  position: relative;
+  margin-bottom: 32px;
+  span {
+    font-weight: 700;
+    &:first-child {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(./assets/pattern-curved-line-1.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 20px;
+        width: 151px;
+        top: -27px;
+        right: 0;
+      }
+    }
+  }
+  @include device(tablet) {
+  font-size: map-get($fonts, "$large2");
+  letter-spacing: -0.78px;
+  max-width: 17ch;
+  margin-bottom: 40px;
+  span {
+    &:first-child {
+      &::before {
+        height: 32px;
+        width: 231px;
+        top: -35px;
+      }
+    }
+  }
+  }
+  @include device(desktop) {
+    font-size: map-get($fonts, "$large3");
+    max-width: initial;
+    span {
+      &:first-child {
+        &::before {
+          height: 39px;
+          width: 287px;
+          top: -45px;
+        }
+      }
+    }
+  }
+}
+
+.headline__text {
+  color: $color3;
+  line-height: 1.75;
+  margin-bottom: 32px;
+  @include device(tablet) {
+    max-width: 39ch;
+    margin-bottom: 40px;
+    }
+  @include device(desktop) {
+    margin-bottom: 52px;
+  }
+}
+
+.headline__img {
+  margin-bottom: 56px;
+  @include device(tablet) {
+    margin-bottom: initial;
+    max-width: 281px;
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  @include device(desktop) {
+    max-width: 350px;
+    margin-right: 96px;
+  }
+}
+
+.headline__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  @include device(tablet) {
+    grid-column: 1 / 3;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include device(desktop) {
+    grid-column: 3;
+    flex-direction: column;
+    justify-content: center;
+    gap: 63px;
+    margin-right: 79px;
+    grid-row: 1 / 3;
+  }
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: map-get($fonts, "$large1");
+  line-height: 1.1666;
+  color: $color4;
+  font-weight: 700;
+  span {
+    font-size: initial;
+    line-height: 1.625;
+    letter-spacing: 2.5px;
+    color: $color3;
+    text-transform: uppercase;
+    font-weight: initial;
+  }
+}
+
+// FIRST SECTION (HEADLINE) ENDS HERE -----------------
+
+// SECOND SECTION (TESTIMONIAL) STARTS HERE
+
+.hero__testimonial-bg {
+  background-color: $color2;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  @include device(tablet) {
+    border-radius: 0;
+    box-shadow: inset 0 220px $color1;
+  }
+}
+
+.hero__testimonial {
+  background-color: $color4;
+  border-radius: 15px;
+  position: relative;
+  padding: 338px 16px 64px 16px;
+  background-image: url(./assets/pattern-curved-line-2.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 40px;
+  background-position: top 260px center;
+  text-align: center;
+  color: $color1;
+  line-height: 1.2;
+  @include device(tablet) {
+    max-width: 689px;
+    margin: 0 auto;
+    padding: 338px 54px 64px 54px;
+  }
+  @include device(desktop) {
+    max-width: 1109px;
+    padding: 88px 125px 88px 0;
+  }
+}
+
+
+.testimonial__img {
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -181px;
+    max-width: 252px;
+    background-image: url(./assets/pattern-blur.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    @include device(desktop) {
+      max-width: 375px;
+      transform: initial;
+      left: 112px;
+      top: -35px;
+    }
+  }
+}
+
+.testimonial__content {
+  @include device(desktop) {
+    max-width: 350px;
+    margin-left: auto;
+  }
+}
+
+.testimonial__title {
+  font-size: map-get($fonts, "$medium3");
+  margin-bottom: 40px;
+  font-weight: 400;
+  span {
+    font-weight: 700;
+  }
+  @include device(desktop) {
+  font-size: map-get($fonts, "$large1");
+  }
+}
+
+.testimonial__text {
+  font-size: map-get($fonts, "$small3");
+  color: $color2;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.testimonial__author {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-weight: 700;
+  font-size: map-get($fonts, "$small3");
+  text-transform: uppercase;
+  span {
+  font-size: map-get($fonts, "$small2");
+    font-weight: initial;
+    letter-spacing: 2.5px;
+  }
+}
+
+// SECOND SECTION (TESTIMONIAL) ENDS HERE-------------
+
+
+
+
