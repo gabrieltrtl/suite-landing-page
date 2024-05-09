@@ -317,7 +317,8 @@ body {
     max-width: 375px;
     transform: initial;
     left: 112px;
-    top: -35px;
+    top: initial;
+    bottom: 0px;
   }
 }
 
@@ -325,6 +326,7 @@ body {
   .testimonial__content {
     max-width: 350px;
     margin-left: auto;
+    text-align: left;
   }
 }
 
