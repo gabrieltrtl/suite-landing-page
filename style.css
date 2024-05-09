@@ -266,6 +266,7 @@ body {
   background-color: #F3EDE7;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  padding-bottom: 56px;
 }
 @media (min-width: 43.75rem) {
   .hero__testimonial-bg {
@@ -363,4 +364,56 @@ body {
   font-size: 16px;
   font-weight: initial;
   letter-spacing: 2.5px;
+}
+
+.footer-bg {
+  background-color: #F3EDE7;
+}
+
+.footer {
+  background-color: #F3EDE7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+  padding-bottom: 80px;
+}
+@media (min-width: 43.75rem) {
+  .footer {
+    flex-direction: row;
+    padding: 0 40px 72px 40px;
+    gap: 0;
+  }
+}
+@media (min-width: 75rem) {
+  .footer {
+    max-width: 1109px;
+    margin: 0 auto;
+    padding: 0 0 72px 0;
+  }
+}
+
+.footer__copy {
+  font-size: 15px;
+  line-height: 2;
+  color: #49566D;
+}
+@media (min-width: 43.75rem) {
+  .footer__copy {
+    margin-left: 202px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: 28px;
+}
+@media (min-width: 43.75rem) {
+  .footer__social {
+    margin-left: auto;
+  }
+}
+
+.social__icon {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

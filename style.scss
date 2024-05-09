@@ -226,6 +226,7 @@ body {
   background-color: $color2;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  padding-bottom: 56px;
   @include device(tablet) {
     border-radius: 0;
     box-shadow: inset 0 220px $color1;
@@ -320,6 +321,50 @@ body {
 
 // SECOND SECTION (TESTIMONIAL) ENDS HERE-------------
 
+// THIRD SECTION (FOOTER) STARTS HERE 
+.footer-bg {
+  background-color: $color2;
+  
+}
 
+.footer {
+  background-color: $color2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+  padding-bottom: 80px;
+  @include device(tablet) {
+    flex-direction: row;
+    padding: 0 40px 72px 40px;
+    gap: 0;
+  }
+  @include device(desktop) {
+    max-width: 1109px;
+    margin: 0 auto;
+    padding: 0 0 72px 0;
+  }
+}
+
+.footer__copy {
+  font-size: 15px;
+  line-height: 2;
+  color: $color3;
+  @include device(tablet) {
+    margin-left: 202px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: 28px;
+  @include device(tablet) {
+    margin-left: auto;
+  }
+}
+
+.social__icon {
+  cursor: pointer;
+}
 
 
